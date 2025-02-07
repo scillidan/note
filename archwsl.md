@@ -36,13 +36,22 @@ sudo vim /etc/pacman.conf
 Server = https://repo.archlinuxcn.org/$arch
 ```
 
+```sh
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+sudo vim /etc/pacman.d/mirrorlist
+```
+
+```
+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+```
+
 ↪ [Arch Linux 中文社区仓库](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)
 
 ```sh
 sudo pacman -Sy
-sudo pacman -S archlinux-keyring
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
+sudo pacman -S archlinux-keyring
 sudo pacman -Syyu
 sudo pacman -S --needed base-devel
 ```
@@ -57,6 +66,7 @@ bat \
 cargo \
 chezmoi \
 cmus \
+cronie \
 curl \
 eza \
 fzf \
@@ -107,7 +117,7 @@ yay
 ``` -->
 
 ```sh
-pacman -Syu yay
+sudo pacman -Syu yay
 yay -S --noconfirm \
 act \
 paru \
@@ -118,14 +128,14 @@ rvm
 
 ```sh
 uv python list
-uv install cpython-3.10.16-linux-x86_64-gnu
-uv pin cpython-3.10.16-linux-x86_64-gnu
+uv python install cpython-3.10.16-linux--x86_64-gnu
+uv python pin cpython-3.10.16-linux-x86_64-gnu
 cd ~
 uv venv .venv
 ```
 
 ```sh
-uv pip install hererocks pip_search pipx
+uv pip install pip_search pipx
 cargo install autocast grex pipe-rename tidy-viewer trashy
 pnpm add -g clean-css html-minifier js-beautify prettier svgo terser
 pnpm add -g degit echo-cli npms-cli markserv open-cli png-to-ico serve
