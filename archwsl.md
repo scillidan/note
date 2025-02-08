@@ -48,10 +48,12 @@ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 ↪ [Arch Linux 中文社区仓库](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)
 
 ```sh
-sudo pacman -Sy
+# sudo pacman -Sy archlinux-keyring
+# sudo pacman-key --init
+# sudo pacman-key --populate archlinux
+sudo pacman -Sy archlinuxcn-keyring
 sudo pacman-key --init
-sudo pacman-key --populate archlinux
-sudo pacman -S archlinux-keyring
+sudo pacman-key --populate
 sudo pacman -Syyu
 sudo pacman -S --needed base-devel
 ```
@@ -68,6 +70,8 @@ chezmoi \
 cmus \
 cronie \
 curl \
+docker \
+docker-compose \
 eza \
 fzf \
 git \
@@ -75,6 +79,7 @@ github-cli \
 harper \
 neovim \
 newsboat \
+nvm \
 openssh \
 pnpm \
 rust \
@@ -120,8 +125,7 @@ yay
 sudo pacman -Syu yay
 yay -S --noconfirm \
 act \
-paru \
-rvm
+paru
 ```
 
 ↪ [How to Install and Use Yay on Arch Linux](https://www.makeuseof.com/install-and-use-yay-arch-linux/)
@@ -139,6 +143,11 @@ uv pip install pip_search pipx
 cargo install autocast grex pipe-rename tidy-viewer trashy
 pnpm add -g clean-css html-minifier js-beautify prettier svgo terser
 pnpm add -g degit echo-cli npms-cli markserv open-cli png-to-ico serve
+```
+
+```sh
+nvm install --lts
+nvm use --lts
 ```
 
 ```sh
