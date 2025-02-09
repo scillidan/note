@@ -88,10 +88,12 @@ sdcv \
 starship \
 tere \
 tldr \
+tmux \
+tmuxinator \
 translate-shell \
 uv \
 wget \
-zellij \
+yq \
 zsh
 ```
 
@@ -131,6 +133,14 @@ paru
 ↪ [How to Install and Use Yay on Arch Linux](https://www.makeuseof.com/install-and-use-yay-arch-linux/)
 
 ```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux
+tmux source ~/.tmux.conf
+```
+
+↪ [Tmux Config: A Guide](https://builtin.com/articles/tmux-config)
+
+```sh
 uv python list
 uv python install cpython-3.10.16-linux--x86_64-gnu
 uv python pin cpython-3.10.16-linux-x86_64-gnu
@@ -150,14 +160,14 @@ nvm install --lts
 nvm use --lts
 ```
 
-```sh
+<!-- ```sh
 hererocks lua53 -l5.3 -rlatest
 source lua53/bin/activate
 luarocks install luacheck
 deactivate-lua
 ```
 
-↪ [hererocks](https://github.com/mpeterv/hererocks)
+↪ [hererocks](https://github.com/mpeterv/hererocks) -->
 
 <!-- ## [gvm](https://github.com/moovweb/gvm) 
 
