@@ -127,7 +127,9 @@ yay
 sudo pacman -Syu yay
 yay -S --noconfirm \
 act \
-paru
+paru \
+texlive-binextra \
+win32yank
 ```
 
 ↪ [How to Install and Use Yay on Arch Linux](https://www.makeuseof.com/install-and-use-yay-arch-linux/)
