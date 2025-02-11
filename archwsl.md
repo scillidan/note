@@ -129,6 +129,7 @@ yay -S --noconfirm \
 act \
 paru \
 texlive-installer
+win32yank
 ```
 
 ↪ [How to Install and Use Yay on Arch Linux](https://www.makeuseof.com/install-and-use-yay-arch-linux/)
