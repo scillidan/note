@@ -127,7 +127,8 @@ yay
 sudo pacman -Syu yay
 yay -S --noconfirm \
 act \
-paru
+paru \
+texlive-installer
 ```
 
 ↪ [How to Install and Use Yay on Arch Linux](https://www.makeuseof.com/install-and-use-yay-arch-linux/)
@@ -159,6 +160,16 @@ pnpm add -g degit echo-cli npms-cli markserv open-cli png-to-ico serve
 nvm install --lts
 nvm use --lts
 ```
+
+```sh
+sudo /opt/texlive-installer/install-tl
+sudo tlmgr option repository https://mirrors.cernet.edu.cn/CTAN/systems/texlive/tlnet
+tlmgr update --list
+sudo tlmgr update --all
+```
+
+↪ [TeX Live](https://wiki.archlinux.org/title/TeX_Live)  
+↪ [tlmgr](https://tug.org/texlive/doc/tlmgr.html)
 
 <!-- ```sh
 hererocks lua53 -l5.3 -rlatest
