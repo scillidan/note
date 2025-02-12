@@ -129,7 +129,7 @@ sudo pacman -Syu yay
 yay -S --noconfirm \
 act \
 paru \
-texlive-installer
+texlive-installer \
 win32yank
 ```
 
