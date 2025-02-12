@@ -95,6 +95,7 @@ uv \
 wget \
 yq \
 zsh
+# zerotier-one
 ```
 
 ```sh
